@@ -1,0 +1,8 @@
+FROM node:20.11.0 AS client-builder
+
+WORKDIR /clientApp
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+
+CMD npm install && npm run dev
