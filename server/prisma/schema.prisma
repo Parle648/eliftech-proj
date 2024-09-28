@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
+model userselif {
   id Int @id @default(autoincrement())
   event_id Int
   full_name String
