@@ -23,7 +23,7 @@ export class UserService {
     try {
       console.log(createUserDto);
       
-      const user = await this.database.users.create({
+      const user = await this.database.userselif.create({
         data: createUserDto
       })
 
@@ -35,7 +35,7 @@ export class UserService {
 
   async findAll(filters: IFilter) {
     try {
-      const users = await this.database.users.findMany({
+      const users = await this.database.userselif.findMany({
         where: {...filters, event_id: +filters.event_id}
       })
 
