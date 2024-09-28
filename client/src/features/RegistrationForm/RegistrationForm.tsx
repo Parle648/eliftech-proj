@@ -17,7 +17,8 @@ function RegistrationForm() {
     formState: { errors },
   } = useForm<IForm>();
 
-  const id = new Number(window.location.href.split(':').at(-1));
+  const id = new Number(window.location.href.split(':').slice(-1)[0]);
+
   const navigate = useNavigate();
 
   function registerOnEvent(data: any) {
