@@ -7,7 +7,7 @@ import getAllEvents from '../api/getAllEvents';
 export default async function updateEvents(number: number, sorts: any) {
   appStore.dispatch(setSpinnerVisible(true));
   const response = await getAllEvents(
-    `http://localhost:3000/event/pages/${number}${sorts.name === '' ? '' : `?name=${sorts.name}&value=${sorts.value}`}`,
+    `https://eliftech-proj.onrender.com/event/pages/${number}${sorts.name === '' ? '' : `?name=${sorts.name}&value=${sorts.value}`}`,
   );
 
   appStore.dispatch(addEvents(response.data.events));

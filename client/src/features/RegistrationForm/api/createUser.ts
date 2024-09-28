@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default async function createUser(data: any) {
-  const users = await axios.post('http://localhost:3000/user', data, {
+  const users = await axios.post('https://eliftech-proj.onrender.com/user', data, {
     headers: {
       'Content-Type': 'application/json',
     },
