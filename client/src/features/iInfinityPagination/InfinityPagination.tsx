@@ -55,7 +55,7 @@ const InfinityPagination = () => {
     return () => {
       document.removeEventListener('scroll', scrollHandler);
     };
-  }, [currentPage, sorts]);
+  }, [pages, currentPage, sorts]);
 
   return <></>;
 };

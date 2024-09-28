@@ -3,12 +3,12 @@ import { useForm } from 'react-hook-form';
 import styles from './styles/visitorsFilters.module.scss';
 import updateUsers from '../../widgets/UsersList/helpers/updateUsers';
 
-const VisitorFilters = ({ id }: { id: Number }) => {
+const VisitorFilters = ({ id }: { id: number }) => {
   const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     updateUsers(`https://eliftech-proj.onrender.com/user?event_id=${id}`);
-  }, []);
+  }, [id]);
 
   function getByFilters(data: any) {
     updateUsers(

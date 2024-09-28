@@ -4,12 +4,12 @@ import { useEffect } from 'react';
 import updateUsers from './helpers/updateUsers';
 import styles from './styles/usersList.module.scss';
 
-const UsersList = ({ id }: { id: Number }) => {
+const UsersList = ({ id }: { id: number }) => {
   const users = useSelector((state: any) => state.Users.value);
 
   useEffect(() => {
     updateUsers(`https://eliftech-proj.onrender.com/user?event_id=${id}`);
-  }, []);
+  }, [id]);
 
   return (
     <div className={styles.block}>

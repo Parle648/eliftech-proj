@@ -4,13 +4,12 @@ import UsersList from '../widgets/UsersList/UsersList';
 
 const VisitPage = () => {
   // const id = new Number(window.location.href.split(':').at(-1));
-  const id = new Number(window.location.href.split(':').slice(-1)[0]);
 
 
   return (
     <main>
-      <VisitorFilters id={id} />
-      <UsersList id={id} />
+      <VisitorFilters id={new Number(window.location.href.split(':').slice(-1)[0]) as number} />
+      <UsersList id={new Number(window.location.href.split(':').slice(-1)[0]) as number} />
       <LineBar />
     </main>
   );

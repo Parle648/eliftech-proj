@@ -4,7 +4,7 @@ import createUser from '../api/createUser';
 
 export default function postUser(data: any) {
   appStore.dispatch(setSpinnerVisible(true));
-  return createUser(data).then((response) => {
+  return createUser(data).then(() => {
     appStore.dispatch(setSpinnerVisible(false));
   });
 }
